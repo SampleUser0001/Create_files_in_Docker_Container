@@ -1,0 +1,14 @@
+version: '3'
+services:
+  hoge:
+    image: ubuntu:latest
+    user: "${USERID}:${GROUPID}"
+    volumes:
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/group:/etc/group:ro
+      - ./app:/app
+    environment:
+      - USERID=${USERID}
+      - GROUPID=${GROUPID}
+      - HOSTUSER=${HOSTUSER}
+    entrypoint: bash /app/app.sh
