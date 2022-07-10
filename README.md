@@ -1,0 +1,2 @@
+# Create_files_in_Docker_Container
+ホスト側で修正可能なファイルをDockerコンテナ内で作成する。
